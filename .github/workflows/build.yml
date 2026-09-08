@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
-      - uses: pre-commit/action@v3.0.1
+      - uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd # v3.0.1
 
   build-mac:
     runs-on: macos-latest
@@ -82,9 +82,9 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@6bed0761d98439e5a578e2877258200ad565ba87 # stable
 
-      - uses: Swatinem/rust-cache@v2
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
 
       - name: Cache cross binary
         id: cache-cross
@@ -108,7 +108,7 @@ jobs:
           cross test --release --no-run --target x86_64-unknown-freebsd
 
       - name: Run tests in FreeBSD VM
-        uses: acj/freebsd-firecracker-action@v0.10.4
+        uses: acj/freebsd-firecracker-action@0fe13161c7d388eed0570eac668e1ba8fc1f1e4e # v0.10.4
         with:
           checkout: true
           verbose: false
