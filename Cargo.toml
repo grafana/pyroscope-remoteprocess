@@ -29,7 +29,7 @@ nix = {version = "0.31", default-features = false, features = ["ptrace", "sched"
 object = "0.40"
 addr2line = "0.27"
 lazy_static = "1.5.0"
-memmap2 = "0.9.10"
+memmap2 = "0.9.11"
 
 [target.'cfg(windows)'.dependencies]
 winapi = {version = "0.3", features = ["winbase", "consoleapi", "wincon", "handleapi", "timeapi", "processenv", "errhandlingapi" ]}
